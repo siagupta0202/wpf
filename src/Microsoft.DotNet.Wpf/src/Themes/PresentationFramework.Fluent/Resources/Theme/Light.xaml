@@ -100,6 +100,10 @@
     <Color x:Key="LayerOnAcrylicFillColorDefault">#40FFFFFF</Color>
     <Color x:Key="LayerOnAccentAcrylicFillColorDefault">#40FFFFFF</Color>
 
+    <Color x:Key="SystemBaseMediumLowColor">#66000000</Color>
+    <Color x:Key="SystemBaseMediumColor">#99000000</Color>
+    <Color x:Key="SystemBaseHighColor">#FF000000</Color>
+
     <!--  Fallback color for missing Acrylic used for e.g. Flyouts  -->
     <Color x:Key="AcrylicBackgroundFillColorDefault">#F9F9F9</Color>
 
@@ -258,6 +262,11 @@
     <SolidColorBrush x:Key="SystemFillColorNeutralBackgroundBrush" Color="{StaticResource SystemFillColorNeutralBackground}" />
     <SolidColorBrush x:Key="SystemFillColorSolidAttentionBackgroundBrush" Color="{StaticResource SystemFillColorSolidAttentionBackground}" />
     <SolidColorBrush x:Key="SystemFillColorSolidNeutralBackgroundBrush" Color="{StaticResource SystemFillColorSolidNeutralBackground}" />
+
+    <SolidColorBrush x:Key="SystemControlForegroundBaseMediumLowBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+    <SolidColorBrush x:Key="SystemControlForegroundBaseMediumBrush" Color="{StaticResource SystemBaseMediumColor}" />
+    <SolidColorBrush x:Key="SystemControlBackgroundBaseHighBrush" Color="{StaticResource SystemBaseHighColor}" />
+
 
     <!--  Elevation border brushes  -->
 
@@ -471,6 +480,14 @@
     <!--  Flyout  -->
     <SolidColorBrush x:Key="FlyoutBackground" Color="{StaticResource AcrylicBackgroundFillColorDefault}" />
     <SolidColorBrush x:Key="FlyoutBorderBrush" Color="{StaticResource SurfaceStrokeColorFlyout}" />
+
+    <!--  GridView  -->
+    <SolidColorBrush x:Key="GridViewBackground" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="GridViewBorderBrush" Color="{StaticResource SystemBaseMediumLowColor}" />
+    <SolidColorBrush x:Key="GridViewForeground" Color="{StaticResource SystemBaseMediumColor}" />
+    <SolidColorBrush x:Key="GridViewBackgroundPointerOver" Color="{StaticResource SubtleFillColorSecondary}" />
+    <SolidColorBrush x:Key="GridViewBackgroundPressed" Color="{StaticResource SubtleFillColorTertiary}" />
+    <SolidColorBrush x:Key="GridViewFillFloating" Color="{StaticResource SystemBaseHighColor}" />
 
     <!--  HyperlinkButton  -->
     <SolidColorBrush x:Key="HyperlinkButtonBackground" Color="{StaticResource SubtleFillColorTransparent}" />
