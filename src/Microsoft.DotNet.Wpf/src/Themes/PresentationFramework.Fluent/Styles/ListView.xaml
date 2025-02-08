@@ -121,7 +121,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="DefaultGridViewColumnHeaderStyle}" TargetType="{x:Type GridViewColumnHeader}">
+    <Style x:Key="DefaultGridViewColumnHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="FontSize" Value="{DynamicResource ControlContentThemeFontSize}" />
         <Setter Property="HorizontalContentAlignment" Value="Left" />
@@ -137,22 +137,22 @@
                     <Grid SnapsToDevicePixels="true">
                         <!-- GridViewColumnHeader Content -->
                         <Border
-            x:Name="ContentContainer"
-            Background="{TemplateBinding Background}"
-            BorderThickness="{TemplateBinding BorderThickness}"
-            BorderBrush="{TemplateBinding BorderBrush}">
+                            x:Name="ContentContainer"
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            BorderBrush="{TemplateBinding BorderBrush}">
                             <ContentPresenter
-                Margin="{TemplateBinding Padding}"
-                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                RecognizesAccessKey="True"
-                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                Margin="{TemplateBinding Padding}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                RecognizesAccessKey="True"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
                         </Border>
                         <Canvas>
                             <Thumb
-                x:Name="PART_HeaderGripper"
-                Style="{StaticResource DefaultGridViewColumnHeaderGripper}"
-                Background="Transparent" />
+                                x:Name="PART_HeaderGripper"
+                                Style="{StaticResource DefaultGridViewColumnHeaderGripper}"
+                                Background="Transparent" />
                         </Canvas>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -180,9 +180,9 @@
                         <!-- The same as normal header, just no gripper. -->
                         <ControlTemplate TargetType="GridViewColumnHeader">
                             <Border
-                Background="{TemplateBinding Background}"
-                BorderThickness="{TemplateBinding BorderThickness}"
-                BorderBrush="{TemplateBinding BorderBrush}" />
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}" />
                             <ControlTemplate.Triggers>
                                 <Trigger Property="Height" Value="Auto">
                                     <Setter Property="MinHeight" Value="{DynamicResource GridViewColumnHeaderMinHeight}" />
@@ -199,10 +199,10 @@
                         <ControlTemplate TargetType="GridViewColumnHeader">
                             <Canvas Name="PART_FloatingHeaderCanvas">
                                 <Rectangle
-                    Opacity="0.3034"
-                    Fill="{DynamicResource GridViewFillFloating}"
-                    Width="{TemplateBinding ActualWidth}"
-                    Height="{TemplateBinding ActualHeight}" />
+                                    Opacity="0.3034"
+                                    Fill="{DynamicResource GridViewFillFloating}"
+                                    Width="{TemplateBinding ActualWidth}"
+                                    Height="{TemplateBinding ActualHeight}" />
                             </Canvas>
                         </ControlTemplate>
                     </Setter.Value>
@@ -211,7 +211,7 @@
         </Style.Triggers>
     </Style>
 
-    <Style x:Key="DefaultGridViewStyle}" TargetType="{x:Type ListView}">
+    <Style x:Key="DefaultGridViewStyle" TargetType="{x:Type ListView}">
 
         <Setter Property="BorderThickness" Value="1"/>
 
@@ -220,8 +220,7 @@
         <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
         <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
         <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
-        <Setter Property="VerticalContentAlignment"
-Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListView}">
