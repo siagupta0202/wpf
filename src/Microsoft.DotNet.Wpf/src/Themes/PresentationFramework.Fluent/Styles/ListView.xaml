@@ -121,7 +121,7 @@
         </Setter>
     </Style>
 
-    <Style x:Key="DefaultGridViewColumnHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
+    <Style x:Key="{x:Type DefaultGridViewColumnHeaderStyle" TargetType="{x:Type GridViewColumnHeader}">
         <Setter Property="OverridesDefaultStyle" Value="True" />
         <Setter Property="FontSize" Value="{DynamicResource ControlContentThemeFontSize}" />
         <Setter Property="HorizontalContentAlignment" Value="Left" />
@@ -317,5 +317,8 @@
     </Style>
 
     <Style BasedOn="{StaticResource DefaultListViewStyle}" TargetType="{x:Type ListView}" />
+
+    <Style BasedOn="{x:Static GridView.GridViewStyleKey}" TargetType="{x:Type ListView}" BasedOn="{StaticResource DefaultGridViewStyle}"/>
+
 
 </ResourceDictionary>

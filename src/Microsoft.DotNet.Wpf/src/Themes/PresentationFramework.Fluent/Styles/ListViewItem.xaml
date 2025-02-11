@@ -12,67 +12,59 @@
     <system:Double x:Key="ListViewItemMinWidth">88</system:Double>
 
 
-    <Style x:Key="DefaultListViewItemStyle" TargetType="{x:Type ListViewItem}">
-        <Setter Property="Foreground" Value="{DynamicResource ListViewItemForeground}" />
+    <Style x:Key="{x:Static GridView.GridViewItemContainerStyleKey}" TargetType="{x:Type ListViewItem}">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Padding" Value="4,1" />
+        <Setter Property="HorizontalContentAlignment" Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+        <Setter Property="VerticalContentAlignment" Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
         <Setter Property="Background" Value="Transparent" />
-        <Setter Property="Border.CornerRadius" Value="{DynamicResource ControlCornerRadius}" />
-        <Setter Property="MinHeight" Value="{StaticResource ListViewItemMinHeight}" />
-        <Setter Property="MinWidth" Value="{StaticResource ListViewItemMinWidth}" />
+        <Setter Property="BorderBrush" Value="Transparent" />
         <Setter Property="BorderThickness" Value="1" />
-        <Setter Property="Margin" Value="0,0,0,2" />
-        <Setter Property="Padding" Value="16,0,12,0" />
-        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
-        <Setter Property="VerticalContentAlignment" Value="Center" />
-        <Setter Property="OverridesDefaultStyle" Value="True" />
-        <Setter Property="FocusVisualStyle" Value="{DynamicResource DefaultCollectionFocusVisualStyle}" />
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}" />
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Border
-                        x:Name="Border"
-                        Margin="0"
-                        Padding="0"
-                        Background="{TemplateBinding Background}"
-                        BorderBrush="{TemplateBinding BorderBrush}"
-                        BorderThickness="{TemplateBinding BorderThickness}"
-                        CornerRadius="{TemplateBinding Border.CornerRadius}">
-                        <Grid>
-                            <ContentPresenter 
-                                Margin="{TemplateBinding Padding}" 
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
-                            <Rectangle
-                                x:Name="ActiveRectangle"
-                                Width="3"
-                                Height="18"
-                                Margin="0"
-                                HorizontalAlignment="Left"
-                                VerticalAlignment="Center"
-                                Fill="{DynamicResource ListViewItemPillFillBrush}"
-                                RadiusX="2"
-                                RadiusY="2"
-                                Visibility="Collapsed" />
-                        </Grid>
+                <ControlTemplate TargetType="{x:Type ListViewItem}">
+                    <Border x:Name="Bd" 
+                        BorderBrush="{TemplateBinding BorderBrush}" 
+                        BorderThickness="{TemplateBinding BorderThickness}" 
+                        Background="{TemplateBinding Background}" 
+                        Padding="{TemplateBinding Padding}" 
+                        SnapsToDevicePixels="true">
+                        <!--remove the HorizontalAlignment due to HeaderRowPresenter does not have the ability to align to center or right-->
+                        <GridViewRowPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <MultiTrigger>
                             <MultiTrigger.Conditions>
-                                <Condition Property="IsEnabled" Value="True" />
                                 <Condition Property="IsMouseOver" Value="True" />
                             </MultiTrigger.Conditions>
-                            <Setter TargetName="Border" Property="Background" Value="{DynamicResource ListViewItemBackgroundPointerOver}" />
-
+                            <Setter TargetName="Bd" Property="Background" Value="{StaticResource Item.MouseOver.Background}" />
+                            <Setter TargetName="Bd" Property="BorderBrush" Value="{StaticResource Item.MouseOver.Border}" />
                         </MultiTrigger>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter TargetName="ActiveRectangle" Property="Visibility" Value="Visible" />
-                            <Setter TargetName="Border" Property="Background" Value="{DynamicResource ListViewItemBackgroundPointerOver}" />
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Selector.IsSelectionActive" Value="False" />
+                                <Condition Property="IsSelected" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Bd" Property="Background" Value="{StaticResource Item.SelectedInactive.Background}" />
+                            <Setter TargetName="Bd" Property="BorderBrush" Value="{StaticResource Item.SelectedInactive.Border}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Selector.IsSelectionActive" Value="True" />
+                                <Condition Property="IsSelected" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="Bd" Property="Background" Value="{StaticResource Item.SelectedActive.Background}" />
+                            <Setter TargetName="Bd" Property="BorderBrush" Value="{StaticResource Item.SelectedActive.Border}" />
+                        </MultiTrigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Bd" Property="TextElement.Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-
-    <Style BasedOn="{StaticResource DefaultListViewItemStyle}" TargetType="{x:Type ListViewItem}" />
 
 </ResourceDictionary>
