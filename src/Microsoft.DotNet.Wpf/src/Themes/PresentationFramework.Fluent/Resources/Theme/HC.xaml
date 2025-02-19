@@ -315,6 +315,51 @@
     <SolidColorBrush x:Key="ContextMenuForeground" Color="{StaticResource SystemColorWindowTextColor}" />
 
     <!--  DataGrid  -->
+    <SolidColorBrush x:Key="DataGridColumnFloatingHeaderBorderBrush" Color="{StaticResource SystemColorHighlightColor}" />
+    <SolidColorBrush x:Key="DataGridHeaderDropSeparatorBackground" Color="{StaticResource SystemColorHighlightColor}" />
+    <SolidColorBrush x:Key="DatatGridSelectAllButtonForeground" Color="{StaticResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="DataGridCellFocusVisualBorderBrush" Color="{StaticResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="DataGridPillFillBrush" Color="{StaticResource SystemColorHighlightColor}" />
+    <SolidColorBrush x:Key="DataGridRowValidationErrorForeground" Color="{StaticResource SystemColorHighlightColor}" />
+    <SolidColorBrush x:Key="DataGridBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="DataGridBorderBrush" Color="{StaticResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="DataGridForeground" Color="{StaticResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="DataGridLinesBrush" Color="{StaticResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="DataGridHeaderSeparatorBrush" Color="{StaticResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="DataGridRowBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="DataGridRowBackgroundPointerOver" Color="{StaticResource SystemColorButtonFaceColor}" />
+    <SolidColorBrush x:Key="DataGridRowBackgroundSelected" Color="{StaticResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="DataGridRowBorderBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="DataGridRowBorderBrushPointerOver" Color="Transparent" />
+    <SolidColorBrush x:Key="DataGridRowBorderBrushSelected" Color="Transparent" />
+    <SolidColorBrush x:Key="DataGridCellBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="DataGridCellBackgroundPointerOver" Color="{StaticResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="DataGridCellBackgroundSelected" Color="{StaticResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="DataGridCellBackgroundInactiveSelection" Color="{StaticResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="DataGridCellBackgroundFocused" Color="{StaticResource SystemColorHighlightColor}" />
+    <SolidColorBrush x:Key="DataGridCellBorderBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="DataGridCellBorderBrushPointerOver" Color="{StaticResource SystemColorHighlightColor}" />
+    <SolidColorBrush x:Key="DataGridCellBorderBrushSelected" Color="Transparent" />
+    <SolidColorBrush x:Key="DataGridCellBorderBrushInactiveSelection" Color="{StaticResource SystemColorGrayTextColor}" />
+    <SolidColorBrush x:Key="DataGridCellBorderBrushFocused" Color="Transparent" />
+    <SolidColorBrush x:Key="DataGridCellForegroundPointerOver" Color="{StaticResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="DataGridCellForegroundSelected" Color="{StaticResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="DataGridCellForegroundFocused" Color="{StaticResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="DataGridCellForegroundDisabled" Color="{StaticResource SystemColorGrayTextColor}" />
+    <SolidColorBrush x:Key="DataGridColumnHeaderBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="DataGridHeaderBackground" Color="{StaticResource SystemColorButtonFaceColor}" />
+    <SolidColorBrush x:Key="DataGridHeaderBackgroundPointerOver" Color="{StaticResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="DataGridHeaderBackgroundPressed" Color="{DynamicResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="DataGridHeaderBackgroundDisabled" Color="{StaticResource SystemColorButtonFaceColor}" />
+    <SolidColorBrush x:Key="DataGridHeaderBackgroundSelected" Color="{StaticResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="DataGridHeaderBorderBrush" Color="{StaticResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="DataGridHeaderBorderBrushPointerOver" Color="{StaticResource SystemColorHighlightColor}" />
+    <SolidColorBrush x:Key="DataGridHeaderBorderBrushPressed" Color="{StaticResource SystemColorHighlightTextColor}" />
+    <SolidColorBrush x:Key="DataGridHeaderBorderBrushDisabled" Color="{StaticResource SystemColorGrayTextColor}" />
+    <SolidColorBrush x:Key="DataGridHeaderBorderBrushSelected" Color="{StaticResource SystemColorButtonTextColor}" />
+    <SolidColorBrush x:Key="DataGridHeaderForegroundDisabled" Color="{StaticResource SystemColorGrayTextColor}" />
+
+    <!-- Deprecated DataGrid Brushes -->
     <SolidColorBrush x:Key="DataGridRowSelectedBackgroundThemeBrush" Color="{StaticResource SystemColorButtonTextColor}" />
     <SolidColorBrush x:Key="DataGridRowSelectedForegroundThemeBrush" Color="{StaticResource SystemColorButtonFaceColor}" />
 

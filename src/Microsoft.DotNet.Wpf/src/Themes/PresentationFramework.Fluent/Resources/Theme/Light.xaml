@@ -437,6 +437,51 @@
     <SolidColorBrush x:Key="ContextMenuForeground" Color="{StaticResource TextFillColorPrimary}" />
 
     <!--  DataGrid  -->
+    <SolidColorBrush x:Key="DataGridColumnFloatingHeaderBorderBrush" Color="{StaticResource ControlStrongStrokeColorDefault}" />
+    <SolidColorBrush x:Key="DataGridHeaderDropSeparatorBackground" Color="{StaticResource ControlStrongStrokeColorDefault}" />
+    <SolidColorBrush x:Key="DatatGridSelectAllButtonForeground" Color="{StaticResource TextFillColorPrimary}" />
+    <SolidColorBrush x:Key="DataGridCellFocusVisualBorderBrush" Color="{StaticResource TextFillColorSecondary}" />
+    <SolidColorBrush x:Key="DataGridPillFillBrush" Color="{StaticResource SystemAccentColorDark1}" />
+    <SolidColorBrush x:Key="DataGridRowValidationErrorForeground" Color="{StaticResource SystemFillColorCritical}" />
+    <SolidColorBrush x:Key="DataGridBackground" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="DataGridBorderBrush" Color="{StaticResource ControlStrokeColorDefault}" />
+    <SolidColorBrush x:Key="DataGridForeground" Color="{StaticResource TextFillColorPrimary}" />
+    <SolidColorBrush x:Key="DataGridLinesBrush" Color="{StaticResource ControlStrokeColorDefault}" />
+    <SolidColorBrush x:Key="DataGridHeaderSeparatorBrush" Color="{StaticResource ControlStrokeColorSecondary}" />
+    <SolidColorBrush x:Key="DataGridRowBackground" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="DataGridRowBorderBrush" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="DataGridRowBackgroundPointerOver" Color="{StaticResource SubtleFillColorTertiary}" />
+    <SolidColorBrush x:Key="DataGridRowBorderBrushPointerOver" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="DataGridRowBackgroundSelected" Color="{StaticResource SubtleFillColorSecondary}" />
+    <SolidColorBrush x:Key="DataGridRowBorderBrushSelected" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="DataGridCellBackground" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="DataGridCellBorderBrush" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="DataGridCellBackgroundPointerOver" Color="{StaticResource SubtleFillColorSecondary}" />
+    <SolidColorBrush x:Key="DataGridCellBorderBrushPointerOver" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="DataGridCellBackgroundSelected" Color="{StaticResource SubtleFillColorTertiary}" />
+    <SolidColorBrush x:Key="DataGridCellBorderBrushSelected" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="DataGridCellBackgroundInactiveSelection" Color="{StaticResource SubtleFillColorTertiary}" />
+    <SolidColorBrush x:Key="DataGridCellBorderBrushInactiveSelection" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="DataGridCellBackgroundFocused" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="DataGridCellBorderBrushFocused" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="DataGridCellForegroundDisabled" Color="{StaticResource TextFillColorDisabled}" />
+    <SolidColorBrush x:Key="DataGridCellForegroundPointerOver" Color="{StaticResource TextFillColorPrimary}" />
+    <SolidColorBrush x:Key="DataGridCellForegroundSelected" Color="{StaticResource TextFillColorPrimary}" />
+    <SolidColorBrush x:Key="DataGridCellForegroundFocused" Color="{StaticResource TextFillColorPrimary}" />
+    <SolidColorBrush x:Key="DataGridColumnHeaderBackground" Color="{StaticResource SubtleFillColorTransparent}" />
+    <SolidColorBrush x:Key="DataGridHeaderBackground" Color="{StaticResource SubtleFillColorTertiary}" />
+    <SolidColorBrush x:Key="DataGridHeaderBackgroundPointerOver" Color="{StaticResource SubtleFillColorSecondary}" />
+    <SolidColorBrush x:Key="DataGridHeaderBackgroundPressed" Color="{StaticResource SubtleFillColorTertiary}" />
+    <SolidColorBrush x:Key="DataGridHeaderBackgroundDisabled" Color="{StaticResource SubtleFillColorDisabled}" />
+    <SolidColorBrush x:Key="DataGridHeaderBackgroundSelected" Color="{StaticResource SubtleFillColorTertiary}" />
+    <SolidColorBrush x:Key="DataGridHeaderBorderBrush" Color="{StaticResource ControlStrokeColorSecondary}" />
+    <SolidColorBrush x:Key="DataGridHeaderBorderBrushPointerOver" Color="{StaticResource ControlStrokeColorSecondary}" />
+    <SolidColorBrush x:Key="DataGridHeaderBorderBrushPressed" Color="{StaticResource ControlStrokeColorSecondary}" />
+    <SolidColorBrush x:Key="DataGridHeaderBorderBrushDisabled" Color="{StaticResource ControlStrokeColorSecondary}" />
+    <SolidColorBrush x:Key="DataGridHeaderBorderBrushSelected" Color="{StaticResource ControlStrokeColorSecondary}" />
+    <SolidColorBrush x:Key="DataGridHeaderForegroundDisabled" Color="{StaticResource TextFillColorDisabled}" />
+    
+    <!-- Deprecated DataGrid Brushes -->
     <SolidColorBrush x:Key="DataGridRowSelectedBackgroundThemeBrush" Color="{StaticResource SystemAccentColorDark1}" />
     <SolidColorBrush x:Key="DataGridRowSelectedForegroundThemeBrush" Color="{StaticResource TextOnAccentFillColorPrimary}" />
 
@@ -736,4 +781,6 @@
     <SolidColorBrush x:Key="TreeViewItemBackgroundSelected" Color="{StaticResource SubtleFillColorSecondary}" />
     <SolidColorBrush x:Key="TreeViewItemForeground" Color="{StaticResource TextFillColorPrimary}" />
     <SolidColorBrush x:Key="TreeViewItemSelectionIndicatorForeground" Color="{StaticResource SystemAccentColorDark1}" />
+
+
 </ResourceDictionary>
