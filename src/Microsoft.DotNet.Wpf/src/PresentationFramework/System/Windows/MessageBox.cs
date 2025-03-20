@@ -49,6 +49,8 @@ namespace System.Windows
         private const int IDIGNORE         = 5;
         private const int IDYES            = 6;
         private const int IDNO             = 7;
+        private const int IDTRYAGAIN       = 10;
+        private const int IDCONTINUE       = 11;
         private const int DEFAULT_BUTTON1  = 0x00000000;
         private const int DEFAULT_BUTTON2  = 0x00000100;
         private const int DEFAULT_BUTTON3  = 0x00000200;
@@ -74,6 +76,16 @@ namespace System.Windows
                     return MessageBoxResult.Yes;
                 case IDNO:
                     return MessageBoxResult.No;
+                case IDABORT:
+                    return MessageBoxResult.Abort;
+                case IDRETRY:
+                    return MessageBoxResult.Retry;
+                case IDIGNORE:
+                    return MessageBoxResult.Ignore;
+                case IDTRYAGAIN:
+                    return MessageBoxResult.TryAgain;
+                case IDCONTINUE:
+                    return MessageBoxResult.Continue;
                 default:
                     return MessageBoxResult.No;
             }
@@ -331,6 +343,17 @@ namespace System.Windows
                     if (result == MessageBoxResult.No) return DEFAULT_BUTTON2;
                     if (result == MessageBoxResult.Cancel) return DEFAULT_BUTTON3;
                     return DEFAULT_BUTTON1;
+                case MessageBoxButton.AbortRetryIgnore:
+                    if (result == MessageBoxResult.Retry) return DEFAULT_BUTTON2;
+                    if (result == MessageBoxResult.Ignore) return DEFAULT_BUTTON3;
+                    return DEFAULT_BUTTON1;
+                case MessageBoxButton.RetryCancel:
+                    if (result == MessageBoxResult.Cancel) return DEFAULT_BUTTON2;
+                    return DEFAULT_BUTTON1;
+                case MessageBoxButton.CancelTryContinue:
+                    if (result == MessageBoxResult.TryAgain) return DEFAULT_BUTTON2;
+                    if (result == MessageBoxResult.Continue) return DEFAULT_BUTTON3;
+                    return DEFAULT_BUTTON1;
                 default:
                     return DEFAULT_BUTTON1;
             }
@@ -401,8 +424,11 @@ namespace System.Windows
         {
             return value == MessageBoxButton.OK
                 || value == MessageBoxButton.OKCancel
+                || value == MessageBoxButton.AbortRetryIgnore
                 || value == MessageBoxButton.YesNo
-                || value == MessageBoxButton.YesNoCancel;
+                || value == MessageBoxButton.YesNoCancel
+                || value == MessageBoxButton.RetryCancel
+                || value == MessageBoxButton.CancelTryContinue;
         }
 
         private static bool IsValidMessageBoxImage(MessageBoxImage value)
@@ -424,7 +450,12 @@ namespace System.Windows
                 || value == MessageBoxResult.No
                 || value == MessageBoxResult.None
                 || value == MessageBoxResult.OK
-                || value == MessageBoxResult.Yes;
+                || value == MessageBoxResult.Yes
+                || value == MessageBoxResult.Abort
+                || value == MessageBoxResult.Retry
+                || value == MessageBoxResult.Ignore
+                || value == MessageBoxResult.TryAgain
+                || value == MessageBoxResult.Continue;
         }
 
         private static bool IsValidMessageBoxOptions(MessageBoxOptions value)
@@ -483,6 +514,9 @@ namespace System.Windows
         /// </devdoc>
         /// <ExternalAPI/> 
         Cancel = 2,
+        Abort = 3,
+        Retry = 4,
+        Ignore = 5,
 
         /// <devdoc>
         ///    <para>
@@ -503,6 +537,8 @@ namespace System.Windows
         /// </devdoc>
         /// <ExternalAPI/> 
         No = 7,
+        TryAgain = 10,
+        Continue = 11,
 
         // NOTE: if you add or remove any values in this enum, be sure to update MessageBox.IsValidMessageBoxResult()
     }
@@ -669,6 +705,7 @@ namespace System.Windows
         ///    </para>
         /// </devdoc>
         OKCancel         = 0x00000001,
+        AbortRetryIgnore         = 0x00000002,
 
         /// <devdoc>
         ///    <para>
@@ -688,6 +725,8 @@ namespace System.Windows
         ///    </para>
         /// </devdoc>
         YesNo            = 0x00000004,
+        RetryCancel         = 0x00000005,
+        CancelTryContinue         = 0x00000006,
 
         // NOTE: if you add or remove any values in this enum, be sure to update MessageBox.IsValidMessageBoxButton()
     }
