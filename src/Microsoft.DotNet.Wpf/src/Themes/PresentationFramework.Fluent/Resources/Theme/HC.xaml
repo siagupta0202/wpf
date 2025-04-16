@@ -342,6 +342,9 @@
     <SolidColorBrush x:Key="DatePickerBackgroundFocused" Color="{StaticResource SystemColorHighlightTextColor}" />
     <SolidColorBrush x:Key="DatePickerBackgroundPointerOver" Color="{StaticResource SystemColorHighlightTextColor}" />
     <SolidColorBrush x:Key="DatePickerPopupBackground" Color="{StaticResource SystemColorWindowColor}"/>
+    <SolidColorBrush x:Key="DatePickerCalendarButtonBackground" Color="{StaticResource SystemColorWindowColor}"/>
+    <SolidColorBrush x:Key="DatePickerCalendarButtonBackgroundPointerOver" Color="{StaticResource SystemColorHighlightTextColor}"/>
+    <SolidColorBrush x:Key="DatePickerCalendarButtonBackgroundPressed" Color="{StaticResource SystemColorHighlightTextColor}"/>
 
     <!--  DynamicScrollBar  -->
     <SolidColorBrush x:Key="ScrollBarButtonBackground" Color="Transparent" />

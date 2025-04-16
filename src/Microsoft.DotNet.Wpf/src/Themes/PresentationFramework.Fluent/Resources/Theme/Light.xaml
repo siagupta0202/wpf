@@ -518,7 +518,10 @@
     <SolidColorBrush x:Key="DatePickerFocusedBorderBrush" Color="{StaticResource SystemAccentColorDark1}" />
     <SolidColorBrush x:Key="DatePickerBackgroundFocused" Color="{StaticResource ControlFillColorInputActive}" />
     <SolidColorBrush x:Key="DatePickerBackgroundPointerOver" Color="{StaticResource ControlFillColorSecondary}" />
-    <SolidColorBrush x:Key="DatePickerPopupBackground" Color="{StaticResource AcrylicBackgroundFillColorDefault}"/>
+    <SolidColorBrush x:Key="DatePickerPopupBackground" Color="{StaticResource ControlFillColorInputActive}"/>
+    <SolidColorBrush x:Key="DatePickerCalendarButtonBackground" Color="{StaticResource SubtleFillColorTransparent}"/>
+    <SolidColorBrush x:Key="DatePickerCalendarButtonBackgroundPointerOver" Color="{StaticResource SubtleFillColorSecondary}"/>
+    <SolidColorBrush x:Key="DatePickerCalendarButtonBackgroundPressed" Color="{StaticResource SubtleFillColorTertiary}"/>
 
     <!--  DynamicScrollBar  -->
     <SolidColorBrush x:Key="ScrollBarButtonBackground" Color="{StaticResource SubtleFillColorTransparent}" />
